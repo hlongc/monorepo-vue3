@@ -1,0 +1,13 @@
+{
+  "name": "@rvue/shared",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "buildOptions": {
+    "name": "Shared",
+    "format": [
+      "esm-bundler",
+      "cjs"
+    ]
+  }
+}

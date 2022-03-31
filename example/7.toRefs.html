@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script src="../node_modules/@rvue/reactivity/dist/reactivity.global.js"></script>
+    <script>
+      const { toRefs, reactive, effect } = RVueReactivity;
+      // const { name, age } = toRefs(reactive({ name: "hlc", age: 26 }));
+
+      // console.log(name);
+      // console.log(age);
+      // effect(() => {
+      //   console.log("年龄", age.value);
+      // });
+
+      // setTimeout(() => {
+      //   age.value = 17;
+      // }, 3000);
+
+      const [a] = toRefs(reactive([1, 2, 3]));
+
+      console.log(a);
+      effect(() => {
+        console.log("年龄", a.value);
+      });
+
+      setTimeout(() => {
+        a.value = 17;
+      }, 3000);
+    </script>
+  </body>
+</html>

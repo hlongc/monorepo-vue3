@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script src="./node_modules/@vue/reactivity/dist/reactivity.global.js"></script>
+    <script>
+      const { reactive, shallowReactive, effect, readonly } = VueReactivity;
+      // reactive代理每一层
+      // shallowReactive只代理第一层
+      // readonly可以用于数据展示，但是不能修改，比如只是用于表格渲染，不修改时，可以节约性能
+      const data = shallowReactive({
+        name: "hlc",
+        age: 26,
+        hobby: ["睡觉", "🎱"],
+      });
+
+      effect(() => {
+        document.querySelector(
+          "#app"
+        ).innerHTML = `${data.name}: ${data.hobby[0]}`;
+      });
+
+      setTimeout(() => {
+        data.name = "hlongc";
+      }, 2000);
+
+      setTimeout(() => {
+        data.hobby[0] = "🏸";
+      }, 3000);
+    </script>
+  </body>
+</html>

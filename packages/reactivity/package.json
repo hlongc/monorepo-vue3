@@ -1,0 +1,17 @@
+{
+  "name": "@rvue/reactivity",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "buildOptions": {
+    "name": "RVueReactivity",
+    "format": [
+      "esm-bundler",
+      "cjs",
+      "global"
+    ]
+  },
+  "dependencies": {
+    "@rvue/shared": "^1.0.0"
+  }
+}

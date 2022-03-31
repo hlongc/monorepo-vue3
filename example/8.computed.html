@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script src="../node_modules/@rvue/reactivity/dist/reactivity.global.js"></script>
+    <script>
+      const { reactive, computed, effect } = RVueReactivity;
+      const state = reactive({ name: "hlc" });
+      const computedName = computed(() => state.name);
+      effect(() => {
+        console.log(computedName.value);
+      });
+      setTimeout(() => {
+        state.name = "hlongc";
+      }, 3000);
+    </script>
+  </body>
+</html>
