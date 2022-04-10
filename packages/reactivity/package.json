@@ -1,6 +1,6 @@
 {
   "name": "@rvue/reactivity",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "main": "index.js",
   "license": "MIT",
   "buildOptions": {
@@ -12,6 +12,6 @@
     ]
   },
   "dependencies": {
-    "@rvue/shared": "^1.0.0"
+    "@rvue/shared": "^0.0.1"
   }
 }
