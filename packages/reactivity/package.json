@@ -1,6 +1,6 @@
 {
   "name": "@rvue/reactivity",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "main": "index.js",
   "license": "MIT",
   "buildOptions": {
@@ -12,7 +12,7 @@
     ]
   },
   "dependencies": {
-    "@rvue/shared": "^0.0.1"
+    "@rvue/shared": "^0.0.2"
   },
   "gitHead": "e3ef74b4eb6f088d8abcc6f09eae1e9826048a99"
 }
