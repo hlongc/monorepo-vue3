@@ -47,7 +47,7 @@ export function computed<T>(
   if (isFunction(getterOrOptions)) {
     getter = getterOrOptions;
     setter = () => {
-      throw new Error("未设置setter函数，不能设置计算属性");
+      throw new Error("未设置setter函数,不能设置计算属性");
     };
   } else {
     getter = getterOrOptions.get;
